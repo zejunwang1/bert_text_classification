@@ -59,7 +59,7 @@ class DataProcessor(object):
     def _to_tensor(self, batch_x, batch_y):
         inputs = self.tokenizer.batch_encode_plus(
             batch_x,
-            padding=True,
+            padding="max_length",
             max_length=self.max_seq_len,
             truncation="longest_first",
             return_tensors="pt")
