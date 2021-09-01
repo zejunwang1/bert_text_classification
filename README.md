@@ -64,5 +64,5 @@ python main.py --mode predict --data_dir ./data --pretrained_bert_dir ./pretrain
 
 输出如下结果：
 
-<img src="C:\Users\wangzejun\Downloads\微信截图_20210901155310.png" alt="微信截图_20210901155310" style="zoom:80%;" />
+<img src="https://github.com/zejunwang1/bert_text_classification/blob/main/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20210901155310.png?raw=true" alt="微信截图_20210901155310" style="zoom:80%;" />
 
