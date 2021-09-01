@@ -38,7 +38,7 @@ python main.py --mode train --data_dir ./data --pretrained_bert_dir ./pretrained
 
 训练中间日志如下：
 
-![微信截图_20210901153428](C:\Users\wangzejun\Downloads\微信截图_20210901153428.png)
+<img src="https://github.com/zejunwang1/bert_text_classification/blob/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20210901153428.png?raw=true" alt="微信截图_20210901154723" style="zoom:67%;" />
 
 模型在验证集上的效果如下：
 
