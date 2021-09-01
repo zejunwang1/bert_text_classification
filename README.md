@@ -52,7 +52,7 @@ python main.py --mode train --data_dir ./data --pretrained_bert_dir ./pretrained
 python main.py --mode demo --data_dir ./data --pretrained_bert_dir ./pretrained_bert
 ```
 
-<img src="C:\Users\wangzejun\Downloads\微信截图_20210901155158.png" alt="微信截图_20210901155158" style="zoom:80%;" />
+<img src="https://github.com/zejunwang1/bert_text_classification/blob/main/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20210901155158.png?raw=true" alt="微信截图_20210901155158" style="zoom:80%;" />
 
 ### 模型预测
 
