@@ -2,6 +2,7 @@
 
 import time
 import torch
+import random
 from tqdm import tqdm
 from datetime import timedelta
 
@@ -37,6 +38,11 @@ class DataProcessor(object):
                 content, label = line.split("\t")
                 contents.append(content)
                 labels.append(int(label))
+        #random shuffle
+        index = list(range(len(labels)))
+        random.shuffle(index)
+        contents = [contents[_] for _ in index]
+        labels = [labels[_] for _ in index]
         return (contents, labels)
 
     def __next__(self):
