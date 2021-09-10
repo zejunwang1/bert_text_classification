@@ -41,7 +41,7 @@ class DataProcessor(object):
                 labels.append(int(label))
         #random shuffle
         index = list(range(len(labels)))
-        random.seed(seed)
+        random.seed(self.seed)
         random.shuffle(index)
         contents = [contents[_] for _ in index]
         labels = [labels[_] for _ in index]
