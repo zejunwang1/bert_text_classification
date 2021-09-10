@@ -12,7 +12,8 @@ def get_time_dif(start_time):
     return timedelta(seconds=int(round(time_dif)))
 
 class DataProcessor(object):
-    def __init__(self, path, device, tokenizer, batch_size, max_seq_len):
+    def __init__(self, path, device, tokenizer, batch_size, max_seq_len, seed):
+        self.seed = seed
         self.device = device
         self.tokenizer = tokenizer
         self.batch_size = batch_size
@@ -40,6 +41,7 @@ class DataProcessor(object):
                 labels.append(int(label))
         #random shuffle
         index = list(range(len(labels)))
+        random.seed(seed)
         random.shuffle(index)
         contents = [contents[_] for _ in index]
         labels = [labels[_] for _ in index]
