@@ -40,8 +40,8 @@ def main():
     if args.mode == "train":
         print("loading data...")
         start_time = time.time()
-        train_iterator = DataProcessor(config.train_file, config.device, tokenizer, config.batch_size, config.max_seq_len)
-        dev_iterator = DataProcessor(config.dev_file, config.device, tokenizer, config.batch_size, config.max_seq_len)
+        train_iterator = DataProcessor(config.train_file, config.device, tokenizer, config.batch_size, config.max_seq_len, args.seed)
+        dev_iterator = DataProcessor(config.dev_file, config.device, tokenizer, config.batch_size, config.max_seq_len, args.seed)
         time_dif = get_time_dif(start_time)
         print("time usage:", time_dif)
 
@@ -99,7 +99,7 @@ def main():
             preds = torch.max(logits.data, 1)[1].tolist()
             labels = [config.label_list[_] for _ in preds]
             for j in range(start, end):
-                print("%s\t%s" % (text[j], labels[j]))
+                print("%s\t%s" % (text[j], labels[j - start]))
                 
 
 if __name__ == "__main__":
