@@ -90,6 +90,7 @@ def train(model, config, train_iterator, dev_iterator):
 
             optimizer.step()
             scheduler.step() 
+            optimizer.zero_grad()
 
             if total_batch % config.log_batch == 0:
                 true = labels.data.cpu()
